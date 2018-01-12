@@ -338,6 +338,7 @@
     <Content Include="Views\Borrows\Edit.cshtml" />
     <Content Include="Views\Borrows\Index.cshtml" />
     <Content Include="Views\Borrows\Web.config" />
+    <Content Include="Views\Carti\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

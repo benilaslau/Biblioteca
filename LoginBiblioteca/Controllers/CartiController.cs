@@ -21,6 +21,10 @@ namespace LoginBiblioteca.Controllers
             return View(db.Cartis.ToList());
         }
 
+        public ActionResult List()
+        {
+            return View(db.Borrows.ToList());
+        }
         // GET: Carti/Details/5
         public ActionResult Details(int? id)
         {

@@ -18,7 +18,7 @@ namespace LoginBiblioteca.Controllers
         // GET: Borrows
         public ActionResult Index()
         {
-            var borrows = db.Borrows.Include(b => b.AspNetUser).Include(b => b.Carti);
+            var borrows = db.Borrows.Include(b => b.AspNetUser).Include(b => b.Carti).Where(b => b.AspNetUser.Email == User.Identity.Name);
             return View(borrows.ToList());
         }
 

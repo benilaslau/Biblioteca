@@ -1,36 +1,24 @@
 ﻿@model IEnumerable<LoginBiblioteca.Models.Borrow>
-
-@{
-    ViewBag.Title = "Imprumut";
-}
-
-<h2>Sumar</h2>
-
-<p>
-    @Html.ActionLink("Imprumut nou", "Create","Borrows", new { @class = "btn btn-primary" })
-</p>
+<h3>Sumar imprumuturi</h3>
+<hr/>
 <table class="table">
     <tr>
         <th>
-            Data Imprumutului
+            Date
         </th>
         <th>
-            Nr carti
+            Nr. carti
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+           Email
         </th>
         <th>
-            Nume Carte
+           Nume carte
         </th>
-        <th>
-            Optiuni
-        </th>
+        <th></th>
     </tr>
 
-@foreach (var item in Model)
-{
-
+@foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Date)
@@ -44,12 +32,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Carti.Nume_carte)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id_imprumut }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id_imprumut })
-        </td>
     </tr>
-       
 }
 
 </table>

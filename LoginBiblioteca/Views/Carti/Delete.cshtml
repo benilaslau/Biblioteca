@@ -4,15 +4,12 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Carti</h4>
+    <h4>Stergere</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Nume_carte)
+            Nume carte:
         </dt>
 
         <dd>
@@ -20,7 +17,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Autor)
+            @Html.DisplayNameFor(model => model.Autor) :
         </dt>
 
         <dd>
@@ -28,7 +25,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Editura)
+            @Html.DisplayNameFor(model => model.Editura):
         </dt>
 
         <dd>
@@ -36,7 +33,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nr_Total)
+            Nr total:
         </dt>
 
         <dd>
@@ -44,7 +41,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nr_Disponibil)
+            Nr Disponibil:
         </dt>
 
         <dd>
@@ -57,7 +54,7 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Sterge" class="btn btn-danger" /> |
             @Html.ActionLink("Inapoi", "Index")
         </div>
     }
