@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Cartis">
+      <EntityTypeMapping TypeName="Model.Carti">
+        <MappingFragment StoreEntitySet="Carti">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nume_carte" ColumnName="Nume_carte" />
+          <ScalarProperty Name="Autor" ColumnName="Autor" />
+          <ScalarProperty Name="Editura" ColumnName="Editura" />
+          <ScalarProperty Name="Nr_Total" ColumnName="Nr_Total" />
+          <ScalarProperty Name="Nr_Disponibil" ColumnName="Nr_Disponibil" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

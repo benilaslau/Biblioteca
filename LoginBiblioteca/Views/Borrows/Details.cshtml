@@ -1,0 +1,50 @@
+﻿@model LoginBiblioteca.Models.Borrow
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Borrow</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nr_carti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nr_carti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUser.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Carti.Nume_carte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Carti.Nume_carte)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_imprumut }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<LoginBiblioteca.Models.Borrow>
+
+@{
+    ViewBag.Title = "Imprumut";
+}
+
+<h2>Sumar</h2>
+
+<p>
+    @Html.ActionLink("Imprumut nou", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Data Imprumutului
+        </th>
+        <th>
+            Nr carti
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUser.Email)
+        </th>
+        <th>
+            Nume Carte
+        </th>
+        <th>
+            Optiuni
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    if (User.Identity.Name == item.AspNetUser.Email)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nr_carti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Carti.Nume_carte)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id_imprumut }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id_imprumut }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id_imprumut })
+        </td>
+    </tr>
+        }
+    }
+
+</table>
