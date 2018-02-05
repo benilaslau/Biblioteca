@@ -73,6 +73,7 @@ namespace LoginBiblioteca.Controllers
                 AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             }
 
+
             if (!ModelState.IsValid)
             {
                 return View(model);
