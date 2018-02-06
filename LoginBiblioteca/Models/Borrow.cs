@@ -21,7 +21,7 @@ namespace LoginBiblioteca.Models
         public string Date { get; set; }
 
         [Required]
-        [Range(0, 5, ErrorMessage = "Introdu un numar valid")]
+        [Range(1, 5, ErrorMessage = "Introdu un numar valid")]
         public string Nr_carti { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }
