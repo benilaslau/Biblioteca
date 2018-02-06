@@ -21,7 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-
+                    
                     @if (User.Identity.Name == "admin@admin.com")
                     {
                         <li>@Html.ActionLink("Home", "List", "Carti")</li>
@@ -32,7 +32,7 @@
                         <li>@Html.ActionLink("Home", "Index", "Borrows")</li>
                         <li>@Html.ActionLink("Imprumuta", "Create", "Borrows")</li>
                     }
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>                    
 
                 </ul>
                 @Html.Partial("_LoginPartial")
